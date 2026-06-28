@@ -249,7 +249,7 @@ export default function Home() {
               {service.label && <em>{service.label}</em>}
               <h3>{service.title}</h3>
               <p>{service.copy}</p>
-              <a href={service.icon === "megaphone" ? "/services" : "#contact"} aria-label={`Learn more about ${service.title}`}>→</a>
+              <a href={service.icon === "megaphone" ? "/services/digital-marketing" : "#contact"} aria-label={`Learn more about ${service.title}`}>→</a>
             </article>
           ))}
         </div>
