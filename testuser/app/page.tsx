@@ -199,9 +199,13 @@ export default function Home() {
       <header className="site-header">
         <a className="brand" href="#" aria-label="UMGU home">UMG<span>U</span></a>
         <nav aria-label="Primary navigation">
-          {["Home", "Services", "Products", "About Us", "Case Studies", "Blog", "Contact"].map((item) => (
-            <a key={item} href={`#${item.toLowerCase().replaceAll(" ", "-")}`}>{item}</a>
-          ))}
+          <a href="#home">Home</a>
+          <a href="/services">Services</a>
+          <a href="#product">Products</a>
+          <a href="#about-us">About Us</a>
+          <a href="#case-studies">Case Studies</a>
+          <a href="#blog">Blog</a>
+          <a href="#contact">Contact</a>
         </nav>
         <a className="quote-btn" href="#contact">Get a Quote <span>→</span></a>
       </header>
@@ -245,7 +249,7 @@ export default function Home() {
               {service.label && <em>{service.label}</em>}
               <h3>{service.title}</h3>
               <p>{service.copy}</p>
-              <a href="#contact" aria-label={`Learn more about ${service.title}`}>→</a>
+              <a href={service.icon === "megaphone" ? "/services" : "#contact"} aria-label={`Learn more about ${service.title}`}>→</a>
             </article>
           ))}
         </div>
