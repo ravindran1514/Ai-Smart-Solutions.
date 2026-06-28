@@ -1,3 +1,5 @@
+import type { ReactNode } from "react";
+
 const services = [
   {
     icon: "bot",
@@ -15,7 +17,7 @@ const services = [
   {
     icon: "phone",
     title: "Custom Mobile App Development",
-    copy: "iOS & Android apps that are powerful, user-friendly, and built to scale with your business.",
+    copy: "iOS and Android apps that are powerful, user-friendly, and built to scale with your business.",
     href: "/services/custom-mobile-app-development",
   },
   {
@@ -32,13 +34,13 @@ const services = [
   },
 ];
 
-const partners = ["StartupX", "PentaLab", "CloudNova", "Golden Grid", "visionary", "TechNova"];
+const partners = ["StartupX", "PentaLab", "CloudNova", "Golden Grid", "Visionary", "TechNova"];
 
 const features = [
   "AI Chatbot for 24/7 Customer Engagement",
-  "Lead Generation & Qualification",
+  "Lead Generation and Qualification",
   "Smart Campaign Automation",
-  "Real-time Analytics & Insights",
+  "Real-time Analytics and Insights",
 ];
 
 const why = [
@@ -52,7 +54,7 @@ const why = [
   },
   {
     title: "Modern Technology",
-    copy: "We use the latest tools & technologies to deliver high-performance results.",
+    copy: "We use the latest tools and technologies to deliver high-performance results.",
   },
   {
     title: "Dedicated Support",
@@ -60,26 +62,112 @@ const why = [
   },
 ];
 
-function Icon({ type }: { type: string }) {
-  const iconSrc: Record<string, string> = {
-    bot: "/brand-icons/bot.svg",
-    web: "/brand-icons/web.svg",
-    phone: "/brand-icons/phone.svg",
-    gear: "/brand-icons/gear.svg",
-    megaphone: "/brand-icons/megaphone.svg",
-    people: "/brand-icons/people.svg",
-    briefcase: "/brand-icons/briefcase.svg",
-    smile: "/brand-icons/smile.svg",
-    award: "/brand-icons/award.svg",
-    shield: "/brand-icons/shield.svg",
-    custom: "/brand-icons/custom.svg",
-    rocket: "/brand-icons/rocket.svg",
-    support: "/brand-icons/support.svg",
-  };
+const iconPaths: Record<string, ReactNode> = {
+  bot: (
+    <>
+      <path d="M12 21v-3.5a5.5 5.5 0 0 1 5.5-5.5h13a5.5 5.5 0 0 1 5.5 5.5V21" />
+      <path d="M24 12V7" />
+      <path d="M20 7h8" />
+      <rect x="10" y="21" width="28" height="18" rx="7" />
+      <path d="M18 30h.01M30 30h.01" />
+      <path d="M20 35c2.4 2 5.6 2 8 0" />
+    </>
+  ),
+  web: (
+    <>
+      <rect x="8" y="11" width="32" height="26" rx="4" />
+      <path d="M8 18h32" />
+      <path d="M17 28h14" />
+      <path d="M17 33h8" />
+    </>
+  ),
+  phone: (
+    <>
+      <rect x="15" y="7" width="18" height="34" rx="5" />
+      <path d="M21 12h6" />
+      <path d="M23.5 35h1" />
+    </>
+  ),
+  gear: (
+    <>
+      <path d="M24 15v-5M24 38v-5M15 24h-5M38 24h-5" />
+      <path d="m17.6 17.6-3.5-3.5M33.9 33.9l-3.5-3.5M30.4 17.6l3.5-3.5M14.1 33.9l3.5-3.5" />
+      <circle cx="24" cy="24" r="7" />
+    </>
+  ),
+  megaphone: (
+    <>
+      <path d="M9 26h6l18-10v22L15 28H9z" />
+      <path d="M15 28l3 10" />
+      <path d="M36 21c2 1.2 3 3 3 5s-1 3.8-3 5" />
+    </>
+  ),
+  people: (
+    <>
+      <circle cx="18" cy="18" r="5" />
+      <circle cx="31" cy="19" r="4" />
+      <path d="M9 38c1.8-6 5-9 9-9s7.2 3 9 9" />
+      <path d="M27 31c3.8.4 6.5 2.7 8 7" />
+    </>
+  ),
+  briefcase: (
+    <>
+      <path d="M18 15v-3a3 3 0 0 1 3-3h6a3 3 0 0 1 3 3v3" />
+      <rect x="8" y="15" width="32" height="24" rx="4" />
+      <path d="M8 24h32" />
+      <path d="M21 24h6" />
+    </>
+  ),
+  smile: (
+    <>
+      <circle cx="24" cy="24" r="16" />
+      <path d="M18 21h.01M30 21h.01" />
+      <path d="M17 29c3.5 4 10.5 4 14 0" />
+    </>
+  ),
+  award: (
+    <>
+      <circle cx="24" cy="19" r="10" />
+      <path d="m18 28-3 12 9-5 9 5-3-12" />
+      <path d="m20.5 19 2.3 2.3 5-5" />
+    </>
+  ),
+  shield: (
+    <>
+      <path d="M24 7 38 13v10c0 8.5-5.6 14.4-14 18-8.4-3.6-14-9.5-14-18V13z" />
+      <path d="m18 24 4 4 8-9" />
+    </>
+  ),
+  custom: (
+    <>
+      <path d="M13 35 35 13" />
+      <path d="m29 11 8 8" />
+      <path d="M12 21l5-5 15 15-5 5H12z" />
+    </>
+  ),
+  rocket: (
+    <>
+      <path d="M28 9c5.2.7 8.3 3.8 9 9L25 30l-7-7z" />
+      <path d="M18 23h-7l5-8h7" />
+      <path d="M25 30v7l8-5v-7" />
+      <path d="M15 33l-4 4" />
+    </>
+  ),
+  support: (
+    <>
+      <circle cx="24" cy="24" r="15" />
+      <path d="M14 25h5v-7h-5zM29 25h5v-7h-5z" />
+      <path d="M34 25c0 5-3 8-8 8h-3" />
+    </>
+  ),
+};
 
+function Icon({ type }: { type: string }) {
   return (
     <span className={`icon icon-${type}`} aria-hidden="true">
-      {iconSrc[type] ? <img src={iconSrc[type]} alt="" /> : <span />}
+      <svg viewBox="0 0 48 48" focusable="false">
+        {iconPaths[type] ?? iconPaths.custom}
+      </svg>
     </span>
   );
 }
@@ -120,8 +208,8 @@ function RobotHero() {
       <div className="orbit orbit-three" />
       <div className="planet planet-left" />
       <div className="planet planet-right" />
-      <div className="chat-bubble intro">Hello! 👋<br />How can I help you<br />grow your business?</div>
-      <div className="chat-bubble label">AI Chat Bot</div>
+      <div className="chat-bubble intro">Hello!<br />How can I help you<br />grow your business?</div>
+      <div className="chat-bubble label">AI Chatbot</div>
       <div className="metric-card growth">
         <small>Growth Increase</small>
         <strong>+245%</strong>
@@ -167,7 +255,7 @@ function DashboardMockup() {
         ))}
       </aside>
       <main>
-        <h3>Good Morning, UMGU! 👋</h3>
+        <h3>Good Morning, UMGU!</h3>
         <div className="dash-cards">
           {[
             ["Total Leads", "12,540", "+18.2%"],
@@ -187,12 +275,12 @@ function DashboardMockup() {
         </div>
       </main>
       <section className="chat-panel">
-        <div className="chat-head">AI Chatbot <span>×</span></div>
-        <div className="chat-msg">Hi there! 👋<br />How can I help you today?</div>
+        <div className="chat-head">AI Chatbot <span>x</span></div>
+        <div className="chat-msg">Hi there!<br />How can I help you today?</div>
         <button>Tell me about your services</button>
         <button>Schedule a demo</button>
         <button>I have a question</button>
-        <div className="input">Type your message... <b>↗</b></div>
+        <div className="input">Type your message... <b>Send</b></div>
       </section>
     </div>
   );
@@ -212,7 +300,7 @@ export default function Home() {
           <a href="#blog">Blog</a>
           <a href="#contact">Contact</a>
         </nav>
-        <a className="quote-btn" href="#contact">Get a Quote <span>→</span></a>
+        <a className="quote-btn" href="#contact">Get a Quote <span>-&gt;</span></a>
       </header>
 
       <section className="hero" id="home">
@@ -221,7 +309,7 @@ export default function Home() {
           <h1><span className="line">Smart</span><span className="line">Solutions.</span><span className="line gradient-text">Stronger</span><span className="line gradient-text">Growth.</span></h1>
           <p className="lead">UMGU builds AI-powered marketing tools, custom websites, and mobile apps that help businesses grow, automate, and scale faster.</p>
           <div className="hero-actions">
-            <a className="primary-btn" href="#services">Explore Services <span>→</span></a>
+            <a className="primary-btn" href="#services">Explore Services <span>-&gt;</span></a>
             <a className="video-btn" href="#product"><i /> Watch Video</a>
           </div>
           <div className="trust">
@@ -232,7 +320,7 @@ export default function Home() {
             </div>
             <div>
               <p>Trusted by 500+ businesses worldwide</p>
-              <b>★★★★★</b>
+              <b>5.0 client rating</b>
             </div>
           </div>
         </div>
@@ -254,7 +342,7 @@ export default function Home() {
               {service.label && <em>{service.label}</em>}
               <h3>{service.title}</h3>
               <p>{service.copy}</p>
-              <a href={service.href} aria-label={`Learn more about ${service.title}`}>→</a>
+              <a href={service.href} aria-label={`Learn more about ${service.title}`}>-&gt;</a>
             </article>
           ))}
         </div>
@@ -267,7 +355,7 @@ export default function Home() {
           <ul>
             {features.map((feature) => <li key={feature}>{feature}</li>)}
           </ul>
-          <a className="primary-btn" href="#contact">Explore Product <span>→</span></a>
+          <a className="primary-btn" href="#contact">Explore Product <span>-&gt;</span></a>
         </div>
         <DashboardMockup />
       </section>
@@ -290,7 +378,7 @@ export default function Home() {
       <section className="why" id="about-us">
         <div className="why-head">
           <p className="eyebrow">WHY CHOOSE UMGU</p>
-          <h2>We Combine <span>AI, Creativity & Technology</span></h2>
+          <h2>We Combine <span>AI, Creativity and Technology</span></h2>
           <p>To deliver smart solutions that help your business grow faster and go further.</p>
         </div>
         <div className="why-content">
@@ -308,7 +396,7 @@ export default function Home() {
           <div className="cta-orb">
             <div>
               <h2>Ready to Grow<br />Your Business?</h2>
-              <a className="primary-btn" href="#contact">Let's Talk <span>→</span></a>
+              <a className="primary-btn" href="#contact">Let's Talk <span>-&gt;</span></a>
             </div>
           </div>
         </div>
