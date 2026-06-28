@@ -4,26 +4,31 @@ const services = [
     label: "AI POWERED",
     title: "AI Marketing Tool with Chatbot",
     copy: "Smart AI tools and chatbots that engage visitors, capture leads, and boost conversions automatically.",
+    href: "/services/ai-marketing-tool-with-chatbot",
   },
   {
     icon: "web",
     title: "Custom Website Development",
     copy: "We build fast, responsive, and SEO-friendly websites tailored to your brand and business goals.",
+    href: "/services/custom-website-development",
   },
   {
     icon: "phone",
     title: "Custom Mobile App Development",
     copy: "iOS & Android apps that are powerful, user-friendly, and built to scale with your business.",
+    href: "/services/custom-mobile-app-development",
   },
   {
     icon: "gear",
     title: "Software Development",
     copy: "End-to-end software solutions customized for your business processes to improve productivity.",
+    href: "/services/software-development",
   },
   {
     icon: "megaphone",
     title: "Digital Marketing Solutions",
     copy: "From strategy to execution, we help you grow your brand, reach the right audience, and get real results.",
+    href: "/services/digital-marketing",
   },
 ];
 
@@ -249,7 +254,7 @@ export default function Home() {
               {service.label && <em>{service.label}</em>}
               <h3>{service.title}</h3>
               <p>{service.copy}</p>
-              <a href={service.icon === "megaphone" ? "/services/digital-marketing" : "#contact"} aria-label={`Learn more about ${service.title}`}>→</a>
+              <a href={service.href} aria-label={`Learn more about ${service.title}`}>→</a>
             </article>
           ))}
         </div>

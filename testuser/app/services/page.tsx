@@ -5,28 +5,28 @@ const coreServices = [
     title: "AI Marketing Tool with Chatbot",
     copy: "Our AI-powered marketing tool with smart chatbot helps you engage visitors, capture leads, and boost conversions automatically.",
     points: ["24/7 AI Chatbot Support", "Lead Generation & Qualification", "Smart Campaign Automation", "Analytics & Insights"],
-    href: "/#contact",
+    href: "/services/ai-marketing-tool-with-chatbot",
   },
   {
     icon: "web",
     title: "Custom Website Development",
     copy: "We design and develop modern, responsive, and SEO-friendly websites tailored to your brand and business goals.",
     points: ["Custom & Responsive Design", "SEO Optimized", "Fast & Secure Performance", "Website Maintenance"],
-    href: "/#contact",
+    href: "/services/custom-website-development",
   },
   {
     icon: "phone",
     title: "Custom Mobile App Development",
     copy: "We build powerful Android & iOS apps that deliver seamless user experiences and drive business growth.",
     points: ["iOS & Android Development", "User-Centric Design", "High Performance", "App Maintenance & Support"],
-    href: "/#contact",
+    href: "/services/custom-mobile-app-development",
   },
   {
     icon: "gear",
     title: "Software Development",
     copy: "We develop robust, scalable, and secure software solutions customized to streamline your business processes.",
     points: ["Custom Software Solutions", "Enterprise Applications", "API Development & Integration", "Testing & QA"],
-    href: "/#contact",
+    href: "/services/software-development",
   },
   {
     icon: "megaphone",
@@ -40,7 +40,7 @@ const coreServices = [
     title: "UI/UX Design Services",
     copy: "We create intuitive and engaging UI/UX designs that enhance user experience and drive business success.",
     points: ["User Research", "Wireframing & Prototyping", "UI/UX Design", "Usability Testing"],
-    href: "/#contact",
+    href: "/services/ui-ux-design-services",
   },
 ];
 
