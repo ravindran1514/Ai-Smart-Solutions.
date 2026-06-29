@@ -294,13 +294,13 @@ export default function Home() {
         <nav aria-label="Primary navigation">
           <a href="#home">Home</a>
           <a href="/services">Services</a>
-          <a href="#product">Products</a>
-          <a href="#about-us">About Us</a>
-          <a href="#case-studies">Case Studies</a>
+          <a href="/products">Products</a>
+          <a href="/about">About Us</a>
+          <a href="/case-studies">Case Studies</a>
           <a href="#blog">Blog</a>
-          <a href="#contact">Contact</a>
+          <a href="/contact">Contact</a>
         </nav>
-        <a className="quote-btn" href="#contact">Get a Quote <span>-&gt;</span></a>
+        <a className="quote-btn" href="/contact">Get a Quote <span>-&gt;</span></a>
       </header>
 
       <section className="hero" id="home">
@@ -355,7 +355,7 @@ export default function Home() {
           <ul>
             {features.map((feature) => <li key={feature}>{feature}</li>)}
           </ul>
-          <a className="primary-btn" href="#contact">Explore Product <span>-&gt;</span></a>
+          <a className="primary-btn" href="/products">Explore Product <span>-&gt;</span></a>
         </div>
         <DashboardMockup />
       </section>
@@ -396,7 +396,7 @@ export default function Home() {
           <div className="cta-orb">
             <div>
               <h2>Ready to Grow<br />Your Business?</h2>
-              <a className="primary-btn" href="#contact">Let's Talk <span>-&gt;</span></a>
+              <a className="primary-btn" href="/contact">Let's Talk <span>-&gt;</span></a>
             </div>
           </div>
         </div>
